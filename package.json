@@ -4,23 +4,28 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
-    "start": "DEBUG=app nodemon app.js",
-    "debg": "DEBUG=* nodemon app.js",
+    "start": "cross-env DEBUG=app nodemon app.js",
+    "debug": "cross-env DEBUG=* nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ben",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^5.4.1",
+    "chalk": "^4.1.2",
     "debug": "^4.4.0",
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
+    "morgan": "^1.10.0",
     "nodemon": "^3.1.9"
   },
   "nodemonConfig": {
     "restartable": "rs",
-    "delay": "2500",
+    "delay": 2500,
     "env": {
-      "PORT": "3000"
+      "PORT": 3000
     }
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }

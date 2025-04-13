@@ -10,10 +10,13 @@ const app = express();
 app.use(morgan("tiny"));
 app.use(express.static(path.join(__dirname, "/public")));
 
-app.get("/", req, res) => {
-    res.render("indez");
+// Commented-out EJS setup for future use
+// app.set("views", path.join(__dirname, "views"));
+// app.set("view engine", "ejs");
 
-}
+app.get("/", (req, res) => {
+    res.render("index");
+});
 
 app.get("/about", (req, res) => {
     res.send("About this page");
