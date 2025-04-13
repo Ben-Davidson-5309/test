@@ -1,0 +1,26 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "start": "DEBUG=app nodemon app.js",
+    "debg": "DEBUG=* nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "debug": "^4.4.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.9"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "delay": "2500",
+    "env": {
+      "PORT": "3000"
+    }
+  }
+}
