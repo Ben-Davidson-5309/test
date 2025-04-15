@@ -10,12 +10,11 @@ const app = express();
 app.use(morgan("tiny"));
 app.use(express.static(path.join(__dirname, "/public")));
 
-// Commented-out EJS setup for future use
-// app.set("views", path.join(__dirname, "views"));
-// app.set("view engine", "ejs");
+app.set("views", "./src/views");
+app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-    res.render("index");
+    res.render("index", { name: "John" });
 });
 
 app.get("/about", (req, res) => {
