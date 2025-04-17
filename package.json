@@ -11,6 +11,7 @@
   "author": "Ben",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^2.2.0",
     "chalk": "^4.1.2",
     "debug": "^4.4.0",
     "ejs": "^3.1.10",
