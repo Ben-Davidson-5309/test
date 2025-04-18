@@ -33,6 +33,13 @@ app.post("/ejsTest", (req, res) => {
     res.render("testName-output", {
         firstName: req.body.fname, 
         lastName: req.body.lname,
+        date: req.body.date,
+        email: req.body.email,
+        phone: req.body.phone,
+        address: req.body.address,
+        city: req.body.city,
+        state: req.body.state,
+        zip: req.body.zip,
     });
 });
 
