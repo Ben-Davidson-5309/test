@@ -31,6 +31,7 @@ app.get("/ejsTest", (req, res) => {
 
 app.post("/ejsTest", (req, res) => {
     res.render("testName-output", {
+        title: "ejs-Testing-output",
         firstName: req.body.fname, 
         lastName: req.body.lname,
         date: req.body.date,
