@@ -1,0 +1,21 @@
+<% let fullName = fname + " " + lname; %>
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Templating Engines - Looping Structures Lab</title>
+    </head>
+    <body>
+        <h1>Looping Output</h1>
+        <% for(let ctr = 0; ctr < numOfTimes; ctr++) { %>
+            <p><%=ctr + 1%>. Hello <%= fullName %>!</p>
+        <% } %>
+        <h2>Using a while loop</h2>
+        <ol>
+            <% let ctr = 0; while(ctr < numOfTimes) { %>
+                <li> Hello <%= fullName %>!</li>
+                <% ctr++; %>    
+            <% } %> 
+        </ol>
+        <p>Thank you for your submission</p>
+    </body>
+</html>

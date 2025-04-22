@@ -1,0 +1,36 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env DEBUG=app nodemon app.js",
+    "debug": "cross-env DEBUG=* nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "bootstrap": "^5.3.5",
+    "chalk": "^4.1.2",
+    "debug": "^4.4.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.9"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "delay": 2500,
+    "env": {
+      "PORT": 3000
+    }
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
+    "mockingoose": "^2.16.2",
+    "mongoose": "^8.13.2"
+  }
+}
