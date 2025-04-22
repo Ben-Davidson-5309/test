@@ -59,6 +59,20 @@ app.post("/selection", (req, res) => {
     });
 });
 
+
+app.get("/looping", (req, res) => {
+    res.render("looping-input");
+});
+
+app.post("/looping", (req, res) => {
+    res.render("looping-output", {
+        fname: req.body.fname,
+        lname: req.body.lname,
+        numOfTimes: req.body.numOfTimes
+    });
+});
+
+
 app.listen(PORT, () => {
     debug(`Listening on port ${chalk.green(PORT)}`);
 });
