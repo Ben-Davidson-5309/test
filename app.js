@@ -44,6 +44,21 @@ app.post("/ejsTest", (req, res) => {
     });
 });
 
+app.get("/selection", (req, res) => {
+    res.render("selection-input");
+});
+
+app.post("/selection", (req, res) => {
+    res.render("selection-output", {
+        title: "ejs-Testing-output",
+        firstName: req.body.firstName, // Fixed typo
+        lastName: req.body.lastName,
+        operation: req.body.operation,
+        numOne: req.body.numOne, // Updated to match EJS template
+        numTwo: req.body.numTwo, // Updated to match EJS template
+    });
+});
+
 app.listen(PORT, () => {
     debug(`Listening on port ${chalk.green(PORT)}`);
 });
